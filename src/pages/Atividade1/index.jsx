@@ -3,55 +3,48 @@ import './style.css'
 // Peça ao usuário o nome de um produto e o preço.
 //  Mostre uma mensagem dizendo quanto custa o produto.
 function Atividade1() {
-const [preco, setPreco] = useState("")
-const [item, setItem] = useState("")
-const[resultado, setResultado] = useState("")
+    const [preco, setPreco] = useState("")
+    const [item, setItem] = useState("")
+    const [resultado, setResultado] = useState("")
 
 
-function produto(event) {
-event.preventeDefault();
-console.log
-setResultado(Number(preco) + (item))
-}
+    function produto(event) {
+        event.preventDefault();
+        console.log()
+        setResultado(Number(preco) + (item))
+    }
+    return (
+
+        <>
+            <h2>Atividade1</h2>
 
 
+            <form onSubmit={produto} >
 
-    return(
+                <label htmlFor="text">Digite o nome de um produto</label>
+                <input
+                    type="text"
+                    value={(item)}
+                    onChange={(event) => setItem(event.target.value)}
+                />
 
-   <>
-    <h2>Atividade1</h2>
+                <label htmlFor="text">Digite o preço do produto</label>
+                <input
+                    type="number"
+                    value={(preco)}
+                    onChange={(event) => setPreco(event.target.value)}
 
-    <Link to='/Home' >
-    <button>Home</button>
-    </Link>
+                />
+                <label htmlFor="text">Vou ver quanto ficou</label>
 
+                <br />
 
-<form onSubmit={produto} >
+                <button type='submit'> Preço </button>
 
-<label htmlFor="text">Digite o nome de um produto</label>
-<input
-type="text"
-value={(item)}
-onChange={(event)=> setPreco(event.target.value) }
-/>
+            </form>
+            <p>{resultado}</p>
+        </>
 
-<label htmlFor="text">Digite o preço do produto</label>
-<input
-type="number"
-value={(preco)}
-onChange={(event)=> setPreco(event.target.value) }
-
-/>
-<label htmlFor="text">Vou ver quanto ficou</label>
-
-<br />
-
-<button type='onSubmit'> Preço </button>
-
-    </form>
-
-    </>
-
-)
+    )
 }
 export default Atividade1

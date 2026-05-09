@@ -6,8 +6,10 @@ return(
 
 <header>
 
-<h2></h2>
-
+<h2>Avalição </h2>
+<Link to={"/"}>
+<button>HOME</button>
+</Link>
 </header>
 )
 }

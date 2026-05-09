@@ -4,7 +4,7 @@ import './style.css'
 function Home() {
 return(
     <>
-    <h2>Minha prova</h2>
+    
 
     <Link to='/Atividade1' >
     <button>Atividade1</button>
